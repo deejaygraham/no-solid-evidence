@@ -1,0 +1,1 @@
+The SOLID principles are something that everyone agrees are a good thing and are definitely doing but few people can tell you what they are. In this session I want to explore the detail of the five principles, why they aren't what you think they are, and what you can do instead to improve the code you write.
