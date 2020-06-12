@@ -460,4 +460,10 @@ close, save, and edit functionality for text files
 – Testing
 – Programming languages, IDEs, etc
 
+Make code small and composable. 
+Don't new loads of helper objects up within your large class, move them to the constructor if you can, then move them out into explicit dependencies so that 
+they can be changed by future you (or someone who comes along later). Tying yourself to dependencies will make it harder for you code to be used later on. 
+Can;t predict when or how your code will be written in the future. 
+Use code that you have written but in another context. 
 
+Inject dependencies - don't 
