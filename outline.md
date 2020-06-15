@@ -58,7 +58,10 @@ I want to propose a different way of thinking but all of these things are availa
 Kamal
 
 Liskov invented encapsulation data abstraction, data hiding (and distributed systems), classes
-Programming with Abstract Data Types 1974 - stacks, functions, class - Java invention!!! without interfaces
+Programming with Abstract Data Types 1974 - stacks, functions, class - Java invention!!! without interfaces, static type checking
+Polymorphism 
+Exception handling
+
 Foundational. 
 
 Modularity
