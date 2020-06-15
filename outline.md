@@ -1,5 +1,9 @@
 Who I am.
 
+Thansk for coming
+
+5 principles 
+
 What I do, NE Bytes, etc. twitter link. 
 
 Writing software is hard. 
@@ -15,6 +19,65 @@ Run camerata at work (dojo) for the last 8 years or so, I talk to lots of devs a
 Lots of people talk about SOLID as the one thing that is desirable for your code. To the point that people in interview will volunteer that they know 
 all about it without being asked. I will come back to this in a bit.
 As a rule-of-thumb but I don't think it's that. It's like exercise, no one does it.
+
+
+Hillel Wayne 
+
+Solid is OOP related because of it is of it's time.
+
+5 principles
+
+SR - All classes should have one responsibility (actually one reason to change)
+
+OC - All classes should be open and/or closed
+
+LS - ???
+
+IS - All interfaces segregated
+
+DI - Put your dependencies upside down. 
+
+Received Wisdom
+
+Why Solid and not something else?
+Why SOLID won ? Robert C Martin INfluencer
+Agile, TDD Clean code, software craftsmanship
+
+1995 - ten commandments of OOP, wrote articles and books. Michael Feathers - came up with SOLID 
+Clean Arch, in all the books, Code Code, right person at right time. Common Wisdom
+
+OOP === SOLID, just a set of decisions
+
+Problems with SOLID are many. Confused in each part, some advice, some strategy, some are goals. Also not supported by the evidence that is offered for some of them. 
+
+Open Closed and Liskov particularly. Others are tautologies of two basic concepts in CS. 
+
+I want to propose a different way of thinking but all of these things are available to anyone, not invented anything here.
+
+
+Kamal
+
+Liskov invented encapsulation data abstraction, data hiding (and distributed systems), classes
+Programming with Abstract Data Types 1974 - stacks, functions, class - Java invention!!! without interfaces
+Foundational. 
+
+Modularity
+
+it's hard
+
+SOLID is often misapplied and misunderstood, even when the advice is clear.
+DRY 
+Dependency injection
+
+Cohesion and Coupling begin with CO
+ Make code more understandable., easier to change
+
+
+Allow multiple implementations?
+
+
+
+
 
 
 Unfortunately, a lot of people say this then can only remember SINGLE responsibility
