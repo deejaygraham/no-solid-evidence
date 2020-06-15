@@ -59,8 +59,18 @@ Kamal
 
 Liskov invented encapsulation data abstraction, data hiding (and distributed systems), classes
 Programming with Abstract Data Types 1974 - stacks, functions, class - Java invention!!! without interfaces, static type checking
-Polymorphism 
+Polymorphism is more like Set<T> than Set<List *>
 Exception handling
+
+CLU where T has equal : IEquatable. Generic Type Constraints
+Liskov substitution - 
+Inheritance for two reasons - sharing implementation, or way of expressing type hierarchy, LIFO, FIFO
+OOPSLA 1988
+Interact with it using Supertype and get same behaviour not polymorphism
+Thinks it's funny
+"Modularity based on abstraction is the way things are done" Found out conversation based on OOP
+
+
 
 Foundational. 
 
