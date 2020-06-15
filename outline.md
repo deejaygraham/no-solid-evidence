@@ -69,8 +69,9 @@ OOPSLA 1988
 Interact with it using Supertype and get same behaviour not polymorphism
 Thinks it's funny
 "Modularity based on abstraction is the way things are done" Found out conversation based on OOP
+Subtype has to behave. 
 
-
+Elephants are mice if you loosen the constraints such that we consider grey mammals with large ears.
 
 Foundational. 
 
