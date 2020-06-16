@@ -29,35 +29,28 @@ SOLID is like exercise, eating healthily or writing unit tests. We all know we s
 I also want to confess this is not a preaching kind of talk. I once had the honour of maintaining a system early on my career 
 where one function was 7000 lines of C code so ...
 
----------------------------------------------------------------------------
-
-
-TODO !!!
-
-
-Maybe not for simple console applications and tools but for stuff we want to be around for a while, libraries, apps, products we 
-want to be able to continue to work with them easily into the future without them becoming a mess.
-
-Doing that requires experience and discipline and, since programming is more art and craft than science, we need heuristics to guide 
-us. Medicine and civil engineering are older professions and have more grounding in the real world. If you don't build a bridge correctly 
-you find out pretty quickly. Or your patient dies. If you add a line of code in the wrong place, you may not find out for a long time and 
-have people following your choice to build up a set of code that becomes unmaintainable. 
-
-
-
 
 ---------------------------------------------------------------------------
 
 Writing software is hard. 
+
+Maybe not for simple console applications and tools but for stuff we want to be around for a while, libraries, apps, products we 
+want to be able to continue to work with them easily into the future without them becoming a mess.
 
 Hard to keep things simple, uncluttered and flexible so that as you add code the design doesn't get harder to use and add to in the future. 
 We know we need to organize the code so that we can find things and we know that we WILL need to make changes in the future. 
 Every choice you make in writing code means that future you and your team 's work can be harder or easier depending on what you choose
 Writing code is hard, reading code can be harder. We do more reading than writing but the writing has to take the reader into account.
 
-Fred Brooks in “The Mythical Man Month” talked about writing software as managing two forms of complication - essential 
+Making a good job of that requires experience and discipline and, since programming is more art and craft than science, we need heuristics to guide 
+us. Medicine and civil engineering are older professions and have more grounding in the real world. If you don't build a bridge correctly 
+you find out pretty quickly. Or your patient dies. If you add a line of code in the wrong place, you may not find out for a long time and 
+have people following your choice to build up a set of code that becomes unmaintainable. 
+
+Fred Brooks in his book “The Mythical Man Month” talked about writing software as managing two forms of complication - essential 
  (the difficulty of the problem domain) and accidental  
-(where we get in our own way and write "bad" code, tools, knowledge etc).  
+(where we get in our own way and write "bad" code, tools, knowledge etc).  SOLID and other guidelines like it are aimed at helping us 
+reduce accidental complexity
 
 
 ---------------------------------------------------------------------------
@@ -132,57 +125,28 @@ GOAL not a principle
 
 Liskov Substitution. 
 
-Liskov (early 1990's) Bob Paraphrased and changed it!!!!
-
-A supertype is defined with some set of characteristics that all of its subtypes then inherit. In turn, subtypes may then choose to override the supertype’s implementation of some behavior, thus allowing for behavior differentiation through polymorphism. This is an extremely powerful technique; however, it raises the question of what exactly makes one object a subtype of another. Is it enough for a particular object to inherit from another? In 1987, Barbara Liskov proposed an answer to this question, arguing that an object should only be considered a subtype of another object if it is interchangeable with its parent object so far as any interacting function is concerned. Liskov and co-author Jeannette Wing further clarified this idea in their 1994 paper, A Behavioral Notation of Subtyping [1], in which they set out a requirement for constraining the behavior of subtypes:
-
-From <https://severinperez.com/software/2018/10/04/making-the-most-of-polymorphism-with-the-liskov-substitution-principle.html> 
-
-
-"Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program." See also design by contract.
-
 Sub types can be substituted for super types. Another inheritance based principle 
-which is really talking about the same thing as open-closed, deriving one type from another and changing behaviour. 
+which is really talking about the same thing as open-closed, deriving one type from another and changing behaviour in the common understanding of it. 
 
-Once again, LSP doesn't really say that. LSP talks about a much firmer constraint and is really talking about being able 
-to substitute one object for another and not being able to tell that it has happened. again not really inheritance and polymorphism.
+Unfortunately, Martin took Liskov's original research and paraphrased it to better fit the OO world but in doing that relaxed the 
+original constraints that made it meaningful and changed what the point of the principle was. 
 
-Allow multiple implementations? Cohesion and Coupling together.
+Let me say a couple of things about Liskov before I go on. Many people picture an Old Russian guy who came up 
+with this rule in the 1800s and are surprised to find out that Liskov is a woman, Dr Barbara Liskov who was awarded the two prizes
+ in CS that would amount to the nobel in any other field. So much of what Liskov talks about looks super close to modern programming. 
+ 
+Original said something like:
+"Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
 
+This is quite a strict constraint. LSP talks about a much firmer constraint and is really talking about being able 
+to substitute one object for another and not being able to tell that it has happened. Not really inheritance and polymorphism.
 
-Liskov invented encapsulation data abstraction, data hiding (and distributed systems), classes
-Programming with Abstract Data Types 1974 - stacks, functions, class - Java invention!!! without interfaces, static type checking
-Polymorphism is more like Set<T> than Set<List *>
-Exception handling
+This research came from a time when we didn't have things like abstract data types. Liskov wrote a paper in 1974 based on her research which basically 
+invented Java, static type systems, inheritance, data hiding, exception handling, classes everything but interfaces!!
 
-CLU where T has equal : IEquatable. Generic Type Constraints
-Liskov substitution - 
-Inheritance for two reasons - sharing implementation, or way of expressing type hierarchy, LIFO, FIFO
-OOPSLA 1988
-Interact with it using Supertype and get same behaviour not polymorphism
-Thinks it's funny
-"Modularity based on abstraction is the way things are done" Found out conversation based on OOP
-Subtype has to behave. 
+Her research programming language CLU actually invented what we now know as Generic Type Constraints in .Net
 
 Elephants are mice if you loosen the constraints such that we consider grey mammals with large ears.
-
-Foundational. 
-
-Modularity
-
-L - very confusing - not really what we want
-
-L - Liskov Substitution principle - examples completely wrong. Implies inheritance or duck typing at least.
-
-Barbara Liskov’s famous definition of subtypes, from 1988 in a conference keynote address titled Data Abstraction and Hierarchy. In short, this 
-principle says that to build software systems from interchangeable parts, those parts must adhere to a contract that allows those parts to be 
-substituted one for another. But the original paper, makes a claim "". This is relaxed and still claimed as Liskov's principle. 
-Like saying that we strictly adhere to the no snakes on a plane principle, but we have relaxed it slightly to include ... 
-any hissing animals with no legs and forked tongues are optional.
- 100% comptabile so it can't be detected as different from the outside. More like changing the implementation of a module to use a stack instead of a list. 
- Not viewable outside of the module so obeys the principle.
-
-Liskov invented the abstract data type. Her paper on them looks super close to modern programming. We went from "what even IS structure" to "formal theory of data" in like 3 years, at least in academia
 
 
 ---------------------------------------------------------------------------
@@ -215,7 +179,7 @@ CODING STRATEGY not a principle
 
 ---------------------------------------------------------------------------
 
-I think all five principls can be boiled down to two concepts - both 
+I think all five principles can be boiled down to two concepts - both 
 beginning with CO. Coupling, Cohesion. Talk a little about them and a bit about Connascence
 
 Cohesion and Coupling can often be as wooly as something like SOLID so I want to talk a little about Connascence
